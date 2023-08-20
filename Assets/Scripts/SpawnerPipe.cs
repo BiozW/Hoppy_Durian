@@ -7,12 +7,12 @@ public class SpawnerPipe : MonoBehaviour
     public float minH = -1f;
     public float maxH = 1f;
 
-    private void Enable()
+    private void OnEnable()
     {
         InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
 
-    private void Disable()
+    private void OnDisable()
     {
         CancelInvoke(nameof(Spawn));
     }

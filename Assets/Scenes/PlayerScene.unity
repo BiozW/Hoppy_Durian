@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &38215052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -473,7 +473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1180772107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,9 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b4428ec0ca23d409d29a1fd93adb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1722394391}
-  playButton: {fileID: 93508912}
-  gameOver: {fileID: 1104348242}
 --- !u!4 &1180772108
 Transform:
   m_ObjectHideFlags: 0
@@ -518,7 +515,7 @@ GameObject:
   - component: {fileID: 1347336490}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,7 +673,7 @@ GameObject:
   - component: {fileID: 1361605246}
   m_Layer: 0
   m_Name: roof
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1175,15 +1172,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722394389}
   m_CullTransparentMesh: 1
+--- !u!1 &1936672645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936672647}
+  - component: {fileID: 1936672646}
+  m_Layer: 0
+  m_Name: SpawnerPipe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1936672646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936672645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908fefa862fa2444cbaa98e9897bd490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4831414248997200733, guid: 428877b41dbce634e933418d9f28a7fb, type: 3}
+  spawnRate: 1
+  minH: -1
+  maxH: 1
+--- !u!4 &1936672647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936672645}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.75, y: 0.3232777, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 460690649}
+  - {fileID: 1180772108}
   - {fileID: 1513682279}
   - {fileID: 286848908}
-  - {fileID: 1180772108}
   - {fileID: 1398016258}
   - {fileID: 321921596}
   - {fileID: 93508913}
   - {fileID: 1104348243}
+  - {fileID: 1936672647}

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    
     private int score;
 
     public void GameOver()
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
-    }*/
+    }
+    */
 
 }

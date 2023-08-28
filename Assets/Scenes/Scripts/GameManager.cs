@@ -3,6 +3,18 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private int score;
+
+    private void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
+    private void IncreaseScore()
+    {
+        score++;
+    }
+    /*
     private Player player;
     private SpawnerPipe spawner;
 
@@ -31,14 +43,6 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
         player.enabled = true;
-
-        MovePipe[] pipes = FindObjectsOfType<MovePipe>();
-
-        for (int i = 0; i < pipes.Length; i++)
-        {
-            Destroy(pipes[i].gameObject);
-        }
-        
         
     }
 
@@ -60,6 +64,6 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
-    }
+    }*/
 
 }

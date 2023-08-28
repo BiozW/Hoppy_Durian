@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MovePipe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5f;
+    private float leftEdge;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += vector3.ledt * speed * Time.deltaTime;
+
+        if (tranform.position.x < leftEdge)
+        {
+            Destroy(gameObject);
+        }
     }
 }

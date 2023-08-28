@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private Player player;
-    //private Spawner spawner;
+    private Spawner spawner;
 
     public Text scoreText;
     public GameObject playButton;
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
 
         player = FindObjectOfType<Player>();
-        //spawner = FindObjectOfType<Spawner>();
+        spawner = FindObjectOfType<Spawner>();
 
         Pause();
     }
@@ -32,13 +32,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         player.enabled = true;
 
-        /*Pipes[] pipes = FindObjectsOfType<Pipes>();
+        Pipes[] pipes = FindObjectsOfType<Pipes>();
 
         for (int i = 0; i < pipes.Length; i++)
         {
             Destroy(pipes[i].gameObject);
         }
-        */
+        
         
     }
 

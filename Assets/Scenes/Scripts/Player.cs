@@ -27,13 +27,14 @@ public class Player : MonoBehaviour
         transform.position += direction * Time.deltaTime;
     }
 
-    private void OntriggerEnter2D(Collider2D other)
+    private void OntriggerEnter2D(Collider2D c)
     {
-        if (other.gameObject.tag == "Obstacle")
+        if (c.gameObject.tag == ("Obstacle"))
         {
+            Debug.Log("Trigger");
             FindObjectOfType<GameManager>().GameOver();
         }
-        else if (other.gameObject.tag == "Scoring")
+        else if (c.gameObject.tag == "Scoring")
         {
             FindObjectOfType<GameManager>().IncreaseScore();
         }

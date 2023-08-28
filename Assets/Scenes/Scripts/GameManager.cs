@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             Destroy(pipes[i].gameObject);
         }
         */
+        
     }
 
     public void GameOver()

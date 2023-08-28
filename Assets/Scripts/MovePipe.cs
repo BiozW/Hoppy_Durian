@@ -7,12 +7,15 @@ public class MovePipe : MonoBehaviour
     public float speed = 5f;
     private float leftEdge;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        
+    }
     void Update()
     {
-        transform.position += vector3.ledt * speed * Time.deltaTime;
+        transform.position += Vector3.left * speed * Time.deltaTime;
 
-        if (tranform.position.x < leftEdge)
+        if (transform.position.x < leftEdge)
         {
             Destroy(gameObject);
         }

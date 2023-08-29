@@ -8,10 +8,15 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float strength = 5f;
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
+            Time.timeScale = 1;
             direction = Vector3.up * strength;
         }
         if(Input.touchCount > 0)

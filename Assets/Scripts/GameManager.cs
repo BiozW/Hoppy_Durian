@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
     {
         score++;
     }
+    private void Play()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            Time.timeScale = 1;
+        }
+    }
 
     private void Update()
     {

@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     private void OntriggerEnter2D(Collider2D c)
     {
-        if (c.gameObject.tag == ("Obstacle"))
+        if (c.tag == "Obstacle")
         {
             Debug.Log("Trigger");
             FindObjectOfType<GameManager>().GameOver();

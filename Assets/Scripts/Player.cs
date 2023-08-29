@@ -30,11 +30,13 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D c)
     {
+        if (c.gameObject.tag == "Killzone")
+        {
+            FindObjectOfType<GameManager>().Killzone();
+        }
         if (c.gameObject.tag == "Obstacle")
         {
-            Debug.Log("Trigger");
-            SceneManager.LoadScene("playerScene");
-            FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameManager>().Obstacle();
         }
         else if (c.gameObject.tag == "Scoring")
         {

@@ -1,19 +1,46 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     
-    private int score;
+    public int score;
+    public int hp;
+
+    public TMPro.TMP_Text hpText;
+    public TMPro.TMP_Text scoreText;
 
     public void GameOver()
     {
-        Debug.Log("Game Over");
+        SceneManager.LoadScene("PlayerScene");
+    }
+    public void Obstacle()
+    {
+        hp--;
+    }
+    public void Killzone()
+    {
+        hp = 0;
     }
 
     public void IncreaseScore()
     {
         score++;
-        Debug.Log("Score : " + score);
+    }
+
+    private void Update()
+    {
+        hpText.text = hp.ToString();
+        scoreText.text = score.ToString();
+        if (hp == 0)
+        {
+            SceneManager.LoadScene("PlayerScene");
+        }
+        if (score > 0)
+        {
+            Debug.Log(score);
+        }
     }
     /*
     private Player player;

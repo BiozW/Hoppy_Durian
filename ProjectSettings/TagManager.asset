@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Scoring
+  - Killzone
   layers:
   - Default
   - TransparentFX

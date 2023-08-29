@@ -1,10 +1,23 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    
+    private int score;
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
+    public void IncreaseScore()
+    {
+        score++;
+        Debug.Log("Score : " + score);
+    }
+    /*
     private Player player;
-    //private Spawner spawner;
+    private SpawnerPipe spawner;
 
     public Text scoreText;
     public GameObject playButton;
@@ -16,7 +29,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
 
         player = FindObjectOfType<Player>();
-        //spawner = FindObjectOfType<Spawner>();
+        spawner = FindObjectOfType<SpawnerPipe>();
 
         Pause();
     }
@@ -31,14 +44,6 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
         player.enabled = true;
-
-        /*Pipes[] pipes = FindObjectsOfType<Pipes>();
-
-        for (int i = 0; i < pipes.Length; i++)
-        {
-            Destroy(pipes[i].gameObject);
-        }
-        */
         
     }
 
@@ -61,5 +66,6 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
     }
+    */
 
 }

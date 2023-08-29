@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,5 +26,19 @@ public class Player : MonoBehaviour
         
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("Trigger");
+            SceneManager.LoadScene("playerScene");
+            FindObjectOfType<GameManager>().GameOver();
+        }
+        else if (c.gameObject.tag == "Scoring")
+        {
+            FindObjectOfType<GameManager>().IncreaseScore();
+        }
     }
 }
